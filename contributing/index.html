@@ -296,6 +296,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#here-are-some-example-alerts-you-can-use" class="md-nav__link">
+    Here are some example alerts you can use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-source-code-in-1-line-of-code" class="md-nav__link">
+    Include source code in 1 line of code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#here-is-a-choice-tab" class="md-nav__link">
+    Here is a choice tab
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -377,6 +425,54 @@
           <li class="md-nav__item">
   <a href="#linting" class="md-nav__link">
     Linting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#here-are-some-example-alerts-you-can-use" class="md-nav__link">
+    Here are some example alerts you can use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-source-code-in-1-line-of-code" class="md-nav__link">
+    Include source code in 1 line of code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#here-is-a-choice-tab" class="md-nav__link">
+    Here is a choice tab
   </a>
   
 </li>
@@ -491,6 +587,104 @@ Or <a href="https://www.pylint.org/"><code>pylint</code></a>
 <p class="admonition-title">Tip</p>
 <p>Howdoi uses vanilla configuration files for both linters (<code>.flake8rc</code> and <code>.pylintrc</code> in the root directory), but with a max line length of 119 characters.</p>
 </div>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<p>To get started building the docs first download <code>mkdocs</code></p>
+<div class="highlight"><pre><span></span><code>$ pip install mkdocs-material markdown-include
+</code></pre></div>
+
+<h4 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>python -m mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>python -m mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>python -m mkdocs build</code> - Build the documentation site.</li>
+<li><code>python -m mkdocs help</code> - Print this help message.</li>
+</ul>
+<h4 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="err">mkdocs.yml    # The configuration file.</span>
+<span class="err">docs/</span>
+<span class="err">    index.md  # The documentation homepage.</span>
+<span class="err">    ...       # Other markdown pages, images and other files.</span>
+</code></pre></div>
+
+
+<h4 id="here-are-some-example-alerts-you-can-use">Here are some example alerts you can use<a class="headerlink" href="#here-are-some-example-alerts-you-can-use" title="Permanent link">&para;</a></h4>
+<p>These are from the <a href="https://python-markdown.github.io/extensions/admonition/">Adomonition</a> extension</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>attention alert</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>caution alert</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>warning alert</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>danger alert</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>error alert</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>hint alert</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>important alert</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>tip alert</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>note alert</p>
+</div>
+<div class="admonition custom alert">
+<p class="admonition-title">Custom</p>
+<p>Custom alert</p>
+</div>
+<p>Alternatively you can use the <code>!!! type "Custom Title"</code> format to get the correct type emoji and use any title you want like so:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip type alert but with a custom title</p>
+<p>they're good aren't they</p>
+</div>
+<h4 id="include-source-code-in-1-line-of-code">Include source code in 1 line of code<a class="headerlink" href="#include-source-code-in-1-line-of-code" title="Permanent link">&para;</a></h4>
+<p>To import code we can use this syntax inside of a code block with the language label:  "{!path/to/file!}".</p>
+<p>Here's <code>../howdoi/__init__.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;1.2.1&#39;</span>
+</code></pre></div>
+
+<h4 id="here-is-a-choice-tab">Here is a choice tab<a class="headerlink" href="#here-is-a-choice-tab" title="Permanent link">&para;</a></h4>
+<p>Proper syntax highlighted code blocks in these don't work the way you'd think and I don't know how to get them to work normally without some extension</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Python</label><div class="tabbed-content">
+<p>To do x in python use this code:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Golang</label><div class="tabbed-content">
+<p>To do x in golang use this code:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello world&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>You can include the contents of a file
+<div class="highlight"><pre><span></span><code><span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;1.2.1&#39;</span>
+</code></pre></div></p>
                 
               
               
