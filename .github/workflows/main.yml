@@ -17,7 +17,7 @@ jobs:
       - name: Lint with Pylint
         run: |
           pip install pylint
-          pylint */*.py --rcfile .pylintrc
+          pylint */*.py --rcfile ./.pylintrc
       - name: Comment if linting fails
         # A comment will be posted if the linting failed
         uses: thollander/actions-comment-pull-request@master
